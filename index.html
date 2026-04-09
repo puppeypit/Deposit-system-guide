@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>คู่มือการใช้งานระบบรับฝากเงิน</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fb; color: #333; }
+    header { background: linear-gradient(90deg,#1e90ff,#00bcd4); color: white; padding: 20px; text-align: center; }
+    .container { max-width: 1000px; margin: auto; padding: 20px; }
+    .section { background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    h2 { color: #1e90ff; }
+    img { width: 100%; border-radius: 10px; margin-top: 10px; }
+    ul { line-height: 1.8; }
+    footer { text-align: center; padding: 15px; color: #777; }
+  </style>
+</head>
+<body>
 
+<header>
+  <h1>คู่มือการใช้งานระบบรับฝากเงิน</h1>
+</header>
+
+<div class="container">
+
+  <div class="section">
+    <h2>1. หน้าเข้าสู่ระบบ (Login)</h2>
+    <p>ผู้ใช้งานต้องกรอก Username และ Password เพื่อเข้าสู่ระบบ</p>
+    <ul>
+      <li>กรอกชื่อผู้ใช้งาน (Username)</li>
+      <li>กรอกรหัสผ่าน (Password)</li>
+      <li>กดปุ่ม "เข้าสู่ระบบ"</li>
+    </ul>
+    <img src="1.png" alt="Login Page">
+  </div>
+
+  <div class="section">
+    <h2>2. หน้ากรอกข้อมูลผู้ฝาก</h2>
+    <p>หลังจากเข้าสู่ระบบ จะพบหน้าสำหรับกรอกข้อมูลผู้ฝากและข้อมูลการฝากเงิน</p>
+    <ul>
+      <li>กรอกรหัสสมาชิก (8 หลัก)</li>
+      <li>กรอกชื่อ-นามสกุล</li>
+      <li>กรอกสังกัด</li>
+      <li>กรอกเบอร์โทรศัพท์</li>
+    </ul>
+    <img src="2.png" alt="Form Page">
+  </div>
+
+  <div class="section">
+    <h2>3. การดึงข้อมูลอัตโนมัติ</h2>
+    <p>เมื่อกรอกรหัสสมาชิกครบ 8 หลัก ระบบจะดึงข้อมูลจากฐานข้อมูลอัตโนมัติ</p>
+    <ul>
+      <li>แสดงชื่อ-นามสกุล</li>
+      <li>แสดงสังกัด</li>
+      <li>แสดงเบอร์โทรศัพท์</li>
+      <li>แสดงบัญชีเงินฝาก</li>
+      <li>สามารถกรอกยอดเงินฝาก หรือเว้นว่างได้</li>
+      <li>อัปโหลดหลักฐานการโอนเงินได้ โดย:
+        <ul>
+          <li>ลากไฟล์ (Drag & Drop)</li>
+          <li>หรือกดเลือกไฟล์เพื่ออัปโหลด</li>
+        </ul>
+      </li>
+    </ul>
+    <img src="3.png" alt="Auto Fill">
+  </div>
+
+  <div class="section">
+    <h2>4. การยืนยันรายการฝาก</h2>
+    <p>เมื่อกรอกข้อมูลครบถ้วน ให้กด "ยืนยันรายการฝาก"</p>
+    <ul>
+      <li>ระบบจะแสดง Pop-up เพื่อตรวจสอบข้อมูลอีกครั้ง</li>
+      <li>ตรวจสอบรายละเอียดให้ถูกต้อง</li>
+      <li>กด "ยืนยันและบันทึก" เพื่อดำเนินการต่อ</li>
+    </ul>
+    <img src="4.png" alt="Confirm Popup">
+  </div>
+
+  <div class="section">
+    <h2>5. การดาวน์โหลดไฟล์ PDF</h2>
+    <p>หลังจากบันทึกข้อมูลสำเร็จ ระบบจะสร้างไฟล์ PDF</p>
+    <ul>
+      <li>สามารถดาวน์โหลดได้ทันทีจากหน้าจอ</li>
+      <li>หรือดาวน์โหลดจากหน้า Dashboard ภายหลังได้</li>
+    </ul>
+    <img src="5.png" alt="Download PDF">
+  </div>
+
+  <div class="section">
+    <h2>6. ตัวอย่างไฟล์ PDF</h2>
+    <p>ตัวอย่างใบสำคัญรับเงินที่ระบบสร้างขึ้น</p>
+    <img src="6.png" alt="PDF Example">
+  </div>
+
+</div>
+
+<footer>
+  <p>หากพบปัญหา ติดต่อฝ่ายสารสนเทศ</p>
+</footer>
+
+</body>
+</html>
