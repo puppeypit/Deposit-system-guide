@@ -27,21 +27,123 @@ header {background:linear-gradient(90deg,#1e90ff,#00c6ff);color:#fff;text-align:
   <button class="tab-btn" onclick="showTab('dashboard')">Dashboard</button>
 </div>
 
+<!-- ================= Deposit System ================= -->
 <div id="deposit" class="container">
-  <div class="section"><h2>1. Login</h2><div class="img-wrapper"><img src="deposit/1.png" onclick="openModal(this)"></div></div>
-  <div class="section"><h2>2. กรอกข้อมูล</h2><div class="img-wrapper"><img src="deposit/2.png" onclick="openModal(this)"></div></div>
-  <div class="section"><h2>3. ดึงข้อมูลอัตโนมัติ</h2><div class="img-wrapper"><img src="deposit/3.png" onclick="openModal(this)"></div></div>
-  <div class="section"><h2>4. ยืนยันข้อมูล</h2><div class="img-wrapper"><img src="deposit/4.png" onclick="openModal(this)"></div></div>
-  <div class="section"><h2>5. ดาวน์โหลด PDF</h2><div class="img-wrapper"><img src="deposit/5.png" onclick="openModal(this)"></div></div>
-  <div class="section"><h2>6. ตัวอย่าง PDF</h2><div class="img-wrapper"><img src="deposit/6.png" onclick="openModal(this)"></div></div>
+
+  <div class="section">
+    <h2>1. หน้า Login</h2>
+    <p>ผู้ใช้งานต้องเข้าสู่ระบบก่อนใช้งาน โดยกรอก Username และ Password</p>
+    <ul>
+      <li>กรอก Username และ Password</li>
+      <li>สามารถเลือกจดจำข้อมูลได้</li>
+      <li>กดปุ่ม "เข้าสู่ระบบ"</li>
+    </ul>
+    <div class="img-wrapper"><img src="deposit/1.png" onclick="openModal(this)"></div>
+  </div>
+
+  <div class="section">
+    <h2>2. หน้ากรอกข้อมูล</h2>
+    <p>เป็นหน้าหลักสำหรับบันทึกรายการฝากเงิน</p>
+    <ul>
+      <li>กรอกรหัสสมาชิก (8 หลัก)</li>
+      <li>กรอกข้อมูลผู้ฝาก</li>
+      <li>เลือกธนาคารและบัญชี</li>
+    </ul>
+    <div class="img-wrapper"><img src="deposit/2.png" onclick="openModal(this)"></div>
+  </div>
+
+  <div class="section">
+    <h2>3. ดึงข้อมูลอัตโนมัติ</h2>
+    <p>เมื่อกรอกรหัสสมาชิก ระบบจะดึงข้อมูลจากฐานข้อมูลให้อัตโนมัติ</p>
+    <ul>
+      <li>แสดงชื่อ-นามสกุล</li>
+      <li>แสดงสังกัด และเบอร์โทร</li>
+      <li>เลือกบัญชีเงินฝาก</li>
+      <li>แนบสลิปได้ (Drag & Drop หรือ Upload)</li>
+    </ul>
+    <div class="img-wrapper"><img src="deposit/3.png" onclick="openModal(this)"></div>
+  </div>
+
+  <div class="section">
+    <h2>4. ยืนยันข้อมูล</h2>
+    <p>ก่อนบันทึก ระบบจะให้ตรวจสอบข้อมูลอีกครั้ง</p>
+    <ul>
+      <li>แสดงรายละเอียดทั้งหมด</li>
+      <li>ตรวจสอบความถูกต้อง</li>
+      <li>กดยืนยันเพื่อบันทึก</li>
+    </ul>
+    <div class="img-wrapper"><img src="deposit/4.png" onclick="openModal(this)"></div>
+  </div>
+
+  <div class="section">
+    <h2>5. ดาวน์โหลด PDF</h2>
+    <p>หลังจากบันทึก ระบบจะสร้างไฟล์ PDF</p>
+    <ul>
+      <li>ดาวน์โหลดได้ทันที</li>
+      <li>หรือโหลดภายหลังจากระบบ</li>
+    </ul>
+    <div class="img-wrapper"><img src="deposit/5.png" onclick="openModal(this)"></div>
+  </div>
+
 </div>
 
+<!-- ================= Dashboard ================= -->
 <div id="dashboard" class="container" style="display:none;">
-  <div class="section"><h2>1. Login</h2><div class="img-wrapper"><img src="dashboard/1.png" onclick="openModal(this)"></div></div>
-  <div class="section"><h2>2. รายการผู้ใช้งาน</h2><div class="img-wrapper"><img src="dashboard/2.png" onclick="openModal(this)"></div></div>
-  <div class="section"><h2>3. รายละเอียดรายการ</h2><div class="img-wrapper"><img src="dashboard/3.png" onclick="openModal(this)"></div></div>
-  <div class="section"><h2>4. รายการทั้งหมด</h2><div class="img-wrapper"><img src="dashboard/4.png" onclick="openModal(this)"></div></div>
-  <div class="section"><h2>5. Filter & Export</h2><div class="img-wrapper"><img src="dashboard/5.png" onclick="openModal(this)"></div></div>
+
+  <div class="section">
+    <h2>1. หน้า Login</h2>
+    <p>เข้าสู่ระบบ Dashboard เพื่อดูรายการ</p>
+    <ul>
+      <li>กรอก Username / Password</li>
+      <li>กดเข้าสู่ระบบ</li>
+    </ul>
+    <div class="img-wrapper"><img src="dashboard/1.png" onclick="openModal(this)"></div>
+  </div>
+
+  <div class="section">
+    <h2>2. รายการของผู้ใช้งาน</h2>
+    <p>แสดงเฉพาะรายการที่ผู้ใช้งานทำไว้</p>
+    <ul>
+      <li>แสดงประวัติรายการ</li>
+      <li>ดูสถานะรายการ</li>
+    </ul>
+    <div class="img-wrapper"><img src="dashboard/2.png" onclick="openModal(this)"></div>
+  </div>
+
+  <div class="section">
+    <h2>3. รายละเอียดรายการ</h2>
+    <p>สามารถดูรายละเอียดธุรกรรมแต่ละรายการ</p>
+    <ul>
+      <li>ข้อมูลสมาชิก</li>
+      <li>ข้อมูลธุรกรรม</li>
+      <li>ดูสลิป</li>
+      <li>ดาวน์โหลด PDF</li>
+    </ul>
+    <div class="img-wrapper"><img src="dashboard/3.png" onclick="openModal(this)"></div>
+  </div>
+
+  <div class="section">
+    <h2>4. รายการทั้งหมด (หัวหน้าฝ่าย)</h2>
+    <p>สามารถดูรายการทั้งหมดในระบบ</p>
+    <ul>
+      <li>เรียงจากล่าสุด</li>
+      <li>ตรวจสอบข้อมูลได้ทั้งหมด</li>
+    </ul>
+    <div class="img-wrapper"><img src="dashboard/4.png" onclick="openModal(this)"></div>
+  </div>
+
+  <div class="section">
+    <h2>5. Filter และ Export</h2>
+    <p>ค้นหาและกรองข้อมูลได้หลายรูปแบบ</p>
+    <ul>
+      <li>ค้นหาชื่อ / รหัส / จำนวนเงิน</li>
+      <li>ค้นหาตามช่วงวันที่</li>
+      <li>ค้นหาผู้ทำรายการ</li>
+      <li>Export เป็น PDF / Excel</li>
+    </ul>
+    <div class="img-wrapper"><img src="dashboard/5.png" onclick="openModal(this)"></div>
+  </div>
+
 </div>
 
 <div id="modal" class="modal" onclick="this.style.display='none'"><img id="modalImg"></div>
