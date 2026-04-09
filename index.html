@@ -4,21 +4,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>คู่มือการใช้งานระบบรับฝากเงิน</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fb; color: #333; }
-    header { background: linear-gradient(90deg,#1e90ff,#00bcd4); color: white; padding: 20px; text-align: center; }
-    .container { max-width: 1000px; margin: auto; padding: 20px; }
-    .section { background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-    h2 { color: #1e90ff; }
-    img { width: 100%; border-radius: 10px; margin-top: 10px; }
-    ul { line-height: 1.8; }
-    footer { text-align: center; padding: 15px; color: #777; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Prompt', sans-serif;
+      margin: 0;
+      background: linear-gradient(180deg,#eef5ff,#f9fbff);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg,#1e90ff,#00c6ff);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    header h1 { margin: 0; font-size: 28px; }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    .section {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: #1e90ff;
+      margin-top: 0;
+    }
+
+    ul { line-height: 1.9; }
+
+    .img-wrapper {
+      margin-top: 15px;
+      overflow: hidden;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .img-wrapper img {
+      width: 100%;
+      transition: transform 0.3s ease;
+      display: block;
+    }
+
+    .img-wrapper:hover img {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .modal.close {
+      display: none;
+    }
+
   </style>
 </head>
 <body>
 
 <header>
-  <h1>คู่มือการใช้งานระบบรับฝากเงิน</h1>
+  <h1>📘 คู่มือการใช้งานระบบรับฝากเงิน</h1>
 </header>
 
 <div class="container">
@@ -31,7 +114,7 @@
       <li>กรอกรหัสผ่าน (Password)</li>
       <li>กดปุ่ม "เข้าสู่ระบบ"</li>
     </ul>
-    <img src="1.png" alt="Login Page">
+    <div class="img-wrapper"><img src="1.png" onclick="openModal(this)"></div>
   </div>
 
   <div class="section">
@@ -43,7 +126,7 @@
       <li>กรอกสังกัด</li>
       <li>กรอกเบอร์โทรศัพท์</li>
     </ul>
-    <img src="2.png" alt="Form Page">
+    <div class="img-wrapper"><img src="2.png" onclick="openModal(this)"></div>
   </div>
 
   <div class="section">
@@ -55,14 +138,9 @@
       <li>แสดงเบอร์โทรศัพท์</li>
       <li>แสดงบัญชีเงินฝาก</li>
       <li>สามารถกรอกยอดเงินฝาก หรือเว้นว่างได้</li>
-      <li>อัปโหลดหลักฐานการโอนเงินได้ โดย:
-        <ul>
-          <li>ลากไฟล์ (Drag & Drop)</li>
-          <li>หรือกดเลือกไฟล์เพื่ออัปโหลด</li>
-        </ul>
-      </li>
+      <li>อัปโหลดหลักฐานการโอนเงินได้ (Drag & Drop หรือเลือกไฟล์)</li>
     </ul>
-    <img src="3.png" alt="Auto Fill">
+    <div class="img-wrapper"><img src="3.png" onclick="openModal(this)"></div>
   </div>
 
   <div class="section">
@@ -71,32 +149,48 @@
     <ul>
       <li>ระบบจะแสดง Pop-up เพื่อตรวจสอบข้อมูลอีกครั้ง</li>
       <li>ตรวจสอบรายละเอียดให้ถูกต้อง</li>
-      <li>กด "ยืนยันและบันทึก" เพื่อดำเนินการต่อ</li>
+      <li>กด "ยืนยันและบันทึก"</li>
     </ul>
-    <img src="4.png" alt="Confirm Popup">
+    <div class="img-wrapper"><img src="4.png" onclick="openModal(this)"></div>
   </div>
 
   <div class="section">
     <h2>5. การดาวน์โหลดไฟล์ PDF</h2>
     <p>หลังจากบันทึกข้อมูลสำเร็จ ระบบจะสร้างไฟล์ PDF</p>
     <ul>
-      <li>สามารถดาวน์โหลดได้ทันทีจากหน้าจอ</li>
-      <li>หรือดาวน์โหลดจากหน้า Dashboard ภายหลังได้</li>
+      <li>สามารถดาวน์โหลดได้ทันที</li>
+      <li>หรือดาวน์โหลดจาก Dashboard</li>
     </ul>
-    <img src="5.png" alt="Download PDF">
+    <div class="img-wrapper"><img src="5.png" onclick="openModal(this)"></div>
   </div>
 
   <div class="section">
     <h2>6. ตัวอย่างไฟล์ PDF</h2>
-    <p>ตัวอย่างใบสำคัญรับเงินที่ระบบสร้างขึ้น</p>
-    <img src="6.png" alt="PDF Example">
+    <p>ตัวอย่างใบสำคัญรับเงิน</p>
+    <div class="img-wrapper"><img src="6.png" onclick="openModal(this)"></div>
   </div>
 
 </div>
 
+<!-- Modal -->
+<div id="modal" class="modal" onclick="closeModal()">
+  <img id="modalImg">
+</div>
+
 <footer>
-  <p>หากพบปัญหา ติดต่อฝ่ายสารสนเทศ</p>
+  <p>© 2026 ระบบรับฝากเงิน</p>
 </footer>
+
+<script>
+function openModal(img) {
+  document.getElementById('modal').style.display = 'flex';
+  document.getElementById('modalImg').src = img.src;
+}
+
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+}
+</script>
 
 </body>
 </html>
